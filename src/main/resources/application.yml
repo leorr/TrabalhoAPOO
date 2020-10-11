@@ -1,0 +1,26 @@
+spring:
+  jpa:
+    database: H2
+    show-sql: true
+    hibernate:
+      use-new-id-generator-mappings: true
+      ddl-auto: update
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:file:~/data/demo
+    username: admin
+    password: admin
+
+  h2:
+    console:
+      enabled: true
