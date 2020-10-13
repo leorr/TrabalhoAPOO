@@ -8,6 +8,8 @@ import javax.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Optional;
 
 @Data
 @Entity
@@ -42,5 +44,8 @@ public class Pedido {
         this.id=id;
     }
 
+    public static Optional<Pedido> of(Optional<Pedido> pedidos){
+        return pedidos;
+    }
 
 }
