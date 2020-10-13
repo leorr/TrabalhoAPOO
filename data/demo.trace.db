@@ -1,0 +1,6 @@
+2020-10-13 12:35:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE *[*] FROM PEDIDO"; expected "identifier"; SQL statement:
+delete * from pedido [42001-200]
+2020-10-13 12:41:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "ENDERECO_RUA VARCHAR(20)": "STRINGDECODE('Rua Jos\u00e9 Higino Martins') (23)"; SQL statement:
+insert into endereco(ENDERECO_CEP ,ENDERECO_RUA ,ENDERECO_BAIRRO ,ENDERECO_NUMERO ) values (88130025,'Rua José Higino Martins','Centro', 989) [22001-200]

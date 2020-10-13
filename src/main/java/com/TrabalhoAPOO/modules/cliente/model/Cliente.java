@@ -1,6 +1,8 @@
 package com.TrabalhoAPOO.modules.cliente.model;
 
 import javax.persistence.*;
+
+import com.TrabalhoAPOO.modules.endereco.model.Endereco;
 import lombok.*;
 
 import java.math.BigInteger;
@@ -21,7 +23,7 @@ public class Cliente {
     private String nome;
 
     @Column(name="cliente_cpf", nullable=false,length=20)
-    private BigInteger cpf;
+    private long cpf;
 
     public Cliente(Integer id){
         this.id=id;

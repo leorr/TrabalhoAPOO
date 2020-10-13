@@ -31,7 +31,6 @@ public class Pedido {
     @ManyToOne @JoinColumn(name="pedido_endereco", nullable=false)
     private Endereco endereco;
 
-
     @ManyToOne @JoinColumn(name="pedido_cliente", nullable=false)
     private Cliente cliente;
 
