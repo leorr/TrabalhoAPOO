@@ -2,7 +2,6 @@ package com.TrabalhoAPOO.modules.pedido.controller;
 
 
 import com.TrabalhoAPOO.modules.pedido.PedidoRepository.PedidoRepository;
-import com.TrabalhoAPOO.modules.pedido.Service.PedidoService;
 import com.TrabalhoAPOO.modules.pedido.model.Pedido;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,6 @@ import java.util.Optional;
 public class PedidoController {
     @Autowired
     PedidoRepository pedidoRepository;
-    @Autowired
-    PedidoService pedidoService;
 
     @GetMapping("/pedidos")
     public List<Pedido> listaPedidos(){

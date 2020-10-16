@@ -1,0 +1,7 @@
+export const FETCH_REQUEST = "FETCH_REQUEST";
+export const FETCH_SUCCESS = "FETCH_SUCCESS";
+export const FETCH_FAILURE = "FETCH_FAILURE";
+export const GET_SINGLE_DATA = "GET_SINGLE_DATA";
+export const SET_SINGLE_DATE = "SET_SINGLE_DATE";
+export const SET_FROM_DATE = "SET_FROM_DATE";
+export const SET_TO_DATE = "SET_TO_DATE";
