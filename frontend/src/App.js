@@ -5,6 +5,7 @@ import Pedidos from './Pedidos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShippingFast } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons' 
+import { faSearch } from '@fortawesome/free-solid-svg-icons' 
 
 export default class PersonList extends React.Component {
 
@@ -37,7 +38,7 @@ export default class PersonList extends React.Component {
         <form onSubmit={this.handleSubmit} className="center form">
           <div className="centerTittle">
             <input type="text" name="cpf_input" placeholder="Digite seu cpf" onChange={this.handleChange}className="center input"/>
-            <button type="submit" className="button">🔍</button>
+            <button type="submit" className="button"><FontAwesomeIcon icon={faSearch} /></button>
           </div>
         </form>
         <Pedidos pedidos={this.state.pedidos} />
