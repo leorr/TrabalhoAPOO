@@ -1,15 +1,56 @@
 .App {
   text-align: center;
 }
+.padd {
+  padding: 10px;
+}
 .center {
   margin: auto;
   width: 60%;
-  border: 5px solid #FFFF00;
-  padding: 10px;
+}
+.centerTittle {
+  text-align:center;
+  color:white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.listapedidos {
+    border-style: solid;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.maindiv {
+  border-radius: 20px 20px;
+  padding:15px;
+  margin-top: 10px;
 }
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.button {
+    border-radius: 5px;
+    border: currentColor;
+    color: white;
+    background: #00A3E0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height:32px;
+}
+.input {
+    border-radius: 5px;
+    border: currentColor;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height:30px;
+}
+
+.notbold{
+    font-weight:normal
+}
+.bg {
+  background:#014C88;
 }
 
 @media (prefers-reduced-motion: no-preference) {
