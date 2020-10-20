@@ -1,23 +1,38 @@
-import React, { Component } from 'react'
-import Pedidos from './Pedidos'
+import React from 'react';
+import axios from 'axios';
+import './App.css';
+import Pedidos from './Pedidos';
 
-class App extends Component {
+export default class PersonList extends React.Component {
   state = {
-    pedidos: []
+    cpf: '',
+    pedidos: [],
   }
-  componentDidMount() {
-    fetch('http://localhost:8080/api/pedidos')
-      .then(res => res.json())
-      .then((data) => {
-        this.setState({ pedidos: data })
+  handleChange = event => {
+    this.setState({ cpf: event.target.value });
+  }
+  handleSubmit = event => {
+    event.preventDefault();
+
+    axios.get(`http://192.168.0.11:8080/api/pedidos/`+this.state.cpf)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+        this.setState({ pedidos: res.data });
       })
-      .catch(console.log)
-    }
+  }
   render() {
     return (
-      <Pedidos pedidos={this.state.pedidos} />
+      <div className="center">
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            CPF:
+            <input type="text" name="cpf" onChange={this.handleChange} />
+          </label>
+          <button type="submit">Busca</button>
+        </form>
+        <Pedidos pedidos={this.state.pedidos} />
+      </div>
     )
   }
 }
-
-export default App;
