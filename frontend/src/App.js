@@ -2,6 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import Pedidos from './Pedidos';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShippingFast } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons' 
 
 export default class PersonList extends React.Component {
 
@@ -30,9 +33,8 @@ export default class PersonList extends React.Component {
   render() {
     return (
       <div className="center maindiv bg">
-        <h1 className="centerTittle">
-        Rastreie suas encomendas</h1>
-        <form onSubmit={this.handleSubmit} className="center">
+        <h1 className="centerTittle"><FontAwesomeIcon icon={faShippingFast} /> Rastreie suas encomendas</h1>
+        <form onSubmit={this.handleSubmit} className="center form">
           <div className="centerTittle">
             <input type="text" name="cpf_input" placeholder="Digite seu cpf" onChange={this.handleChange}className="center input"/>
             <button type="submit" className="button">🔍</button>
@@ -40,8 +42,7 @@ export default class PersonList extends React.Component {
         </form>
         <Pedidos pedidos={this.state.pedidos} />
         <footer>
-          <p>Autor: Leonardo Ribeiro<br/>
-          <a href="https://github.com/leorr">Repositorios Github</a></p>
+          <p>Aplicação desenvolvida por Leonardo Ribeiro para estudos <a href="https://github.com/leorr"><FontAwesomeIcon icon={faGithub} /></a></p>
         </footer>
 
         </div>

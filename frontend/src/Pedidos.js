@@ -11,7 +11,7 @@ const Pedidos = ({pedidos}) => {
                     <h5 className="pedido-id">Pedido ID: {pedido.id}</h5>
                           <h4>Destinatário:<span className='notbold'> {pedido.cliente.nome}</span> <br />
                                   Endereço:<span className='notbold'> {pedido.endereco.rua}, {pedido.endereco.numero} - {pedido.endereco.bairro}</span><br />
-                                  Situação:<span className='notbold'> {pedido.status} em {pedido.data}</span> <br />
+                                  Situação:<span className='notbold'> {capitalizeFirstLetter(pedido.status.replace(/_/g," ").toLowerCase())} em {pedido.data.replace(/-/g,"/")}</span> <br />
                     </h4>
                   </div>
              </div>
@@ -23,5 +23,9 @@ const Pedidos = ({pedidos}) => {
             <div/>
         )
 };
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 export default Pedidos;
