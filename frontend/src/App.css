@@ -21,18 +21,41 @@
   border-radius: 50px;
   margin-top: 50px;
   background: linear-gradient(45deg, #014c88, #00254254);
+  animation: heightinc 2s;
+}
+.listapedidosFadeOut {
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 .pedido{
   margin-left: 30px;
+  animation: fadein 3s;
 }
 .maindiv {
   border-radius: 20px 20px;
   padding:15px;
   margin-top: 10px;
 }
+@keyframes heightinc {
+  from { max-height: 0px; 
+  }
+  to   { max-height: 800px;}
+}
+@keyframes heightdec {
+  height: 0px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+#footer{
+  opacity: 1;
+  transition: opacity 1s;
+}
+#footer.fade{
+  opacity:0;
 }
 .button {
     border-radius: 5px;
@@ -50,7 +73,6 @@
     border-top-right-radius: 0;
     height:30px;
 }
-
 .notbold{
     font-weight:normal
 }

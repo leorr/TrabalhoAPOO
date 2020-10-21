@@ -4,7 +4,7 @@ import './App.css'
 const Pedidos = ({pedidos}) => {
     if(pedidos && pedidos.length)
         return (
-            <div className="listapedidos">
+            <div className="listapedidos" id="listapedidos">
               {pedidos.map((pedido) => (
                 <div className="pedido">
                   <div className="pedido-body padd">
@@ -15,12 +15,15 @@ const Pedidos = ({pedidos}) => {
                     </h4>
                   </div>
              </div>
-              ))}
+              ))
+              }
             </div>
+      
       )
     else
         return(
-            <div/>
+          <div className="listapedidosFadeOut">
+          </div>
         )
 };
 
